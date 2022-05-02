@@ -1,6 +1,6 @@
 .bodyContainer{
     display: flex;
-   
+    
     justify-content: space-between;
     height: 100vh;
     width: 100vw;
@@ -13,6 +13,13 @@
 *{
     margin: 0;
     padding: 0;
+}
+.mainCharacterView-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+
 }
 
 .mainCharacterView{
@@ -78,10 +85,9 @@ align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0px 0px 20px 10px white;
-    
-
-    
+      
 }
+
 .enemyStats{
     display: flex;
     justify-content: center;
@@ -95,3 +101,115 @@ align-items: center;
     box-shadow: 0px 0px 20px 10px white;
 
 }
+ 
+
+#btn{
+    border: 1px solid white;
+    width: 25vw;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0px 0px 20px 10px white;
+    margin-bottom: 40px;
+    
+}
+
+#toGame{
+    text-decoration: none;
+}
+
+
+/*=====Instructions ======*/
+
+.instructions{
+    border: 1px solidblack;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 20px 10px white;
+    border-radius: 2%;
+}
+
+.mainInstructionView{
+
+width: 90%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+margin: 30px;
+
+}
+#nameBoxInstruction{
+    border: 1px solid black;
+    width: 25vw;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 0px 0px 20px 10px white;
+
+    margin: 30Px;
+}
+
+/* =====Battle Page======= */
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Share Tech Mono', monospace;
+    color:blue;
+}
+.container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .titleBar {
+    width: 90%;
+    margin: 0;
+    text-align: center;
+    color:red;
+  }
+  .mainSection {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 3px solid red;
+    border-radius: 4px;
+    height: 300px;
+    color:blue;
+  }
+  .textBox{
+    height: 200px;
+    min-width: 200px;
+    width: 50%;
+    overflow-y: auto;
+    color:pink;
+  }
+  .buttonBar {
+    min-width: 500px;
+    width: 60%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .button {
+    padding: 0 15px;
+    border: 3px solid #DE2222;
+    background-color: #DECA22;
+    border-radius: 4px;
+  }
+  
+  .button:active {
+    background-color: #DE2222;
+  }
