@@ -20,9 +20,9 @@ class Ship {
     shipAttack(alien) {
         if (this.hitAccuracy()) {
             alien.hull -= this.firepower;
-
+            document.getElementById("outputHull").innerHTML = alien.hull;
             let shipAttackText = `\n + ${this.name} shot ${alien.name} Hull: ${alien.hull} \n `;
-
+            
             return shipAttackText;
         } else {
             return `${this.name} missed target!`;
@@ -61,7 +61,7 @@ const reset = () => {
 
 
     heroShip.hull = 20;
-
+    document.getElementById("outputName").innerHTML = heroShip.hull;
 
     alienShip.splice(0, alienShip.length);
 
@@ -124,12 +124,13 @@ const attack = () => {
     }
     alienShip.shift();
 
-    winCheck();
+    //winCheck();
 }
 
 
 reset();
 document.getElementById("resetButton").addEventListener("click", reset, false);
+
 
 console.log(heroShip);
 
@@ -141,7 +142,6 @@ btnPlay.addEventListener('click', promptFunction)
 function promptFunction() {
     let playerHull = heroShip.hull;
     
-
     if (playerHull !== null) {
       console.log(playerHull)
       
