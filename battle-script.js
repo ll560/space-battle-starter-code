@@ -1,5 +1,5 @@
 //Battle script
-
+console.log('Battle')
 // Create ship class w/constructor
 class Ship {
     constructor(name, hull, firepower, accuracy) {
@@ -48,7 +48,7 @@ const disableBtns = () => {
 }
 
 const pushText = (text) => {
-    attText.innerHTML += text;
+    attackText.innerHTML += text;
 }
 
 const reset = () => {
@@ -77,15 +77,18 @@ const reset = () => {
 
 const getStatus = () => {
     let temp = `<br>${heroShip.name}<br>Hull - ${heroShip.hull}<br>Firepower - ${heroShip.firepower}<br>Accuracy - ${heroShip.accuracy}<br>`;
-
+ document.getElementById("player").innerHTML = heroShip.hull;
     for (let alien of alienShip) {
         temp += `<br>${alien.name}<br>Hull - ${alien.hull}<br>Firepower - ${alien.firepower}<br>Accuracy - ${alien.accuracy}<br>`
+       
     }
     pushText(temp);
+    
 }
 
 const retreat = () => {
     pushText("\n GAME OVER!");
+    alert("GAVE OVER")
     disableBtns();
 }
 
@@ -115,11 +118,11 @@ const attack = () => {
             pushText(alienShip[0].shipAttack(heroShip));
 
         } else {
-            pushText("<br>You destroyed " + alienShip[0].name + " !<br>");
+            pushText("<br>You destroyed " + alienShip[0].name + " !<br>")
+           
         }
     }
     alienShip.shift();
-
 
     winCheck();
 }
@@ -129,3 +132,20 @@ reset();
 document.getElementById("resetButton").addEventListener("click", reset, false);
 
 console.log(heroShip);
+
+
+const btnPlay = document.querySelector('#attackButton')
+
+btnPlay.addEventListener('click', promptFunction)
+
+function promptFunction() {
+    let playerHull = heroShip.hull;
+    
+
+    if (playerHull !== null) {
+      console.log(playerHull)
+      
+      document.getElementById("outputName").innerHTML = playerHull;
+    
+    } 
+  }

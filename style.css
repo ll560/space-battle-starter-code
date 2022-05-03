@@ -10,6 +10,7 @@
     background-color: black;
     color: white;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -23,13 +24,13 @@
 }
 
 .mainCharacterView{
-
 width: 50%;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
 }
+
 .left{
 
 }
@@ -50,7 +51,7 @@ align-items: center;
 
 }
 .playerImage{
-    border: 1px solidblack;
+    border: 1px solid black;
     width: 30vw;
     height: 40vh;
     background-image: url("/images/space_hero.gif");
@@ -64,6 +65,7 @@ align-items: center;
 }
 .playerStats{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solidblack;
@@ -115,6 +117,7 @@ align-items: center;
     box-shadow: 0px 0px 20px 10px white;
     margin-bottom: 40px;
     
+    
 }
 
 #toGame{
@@ -160,13 +163,13 @@ margin: 30px;
 }
 
 /* =====Battle Page======= */
-*{
+/* *{
     margin: 0;
     padding: 0;
     background-color: black;
     font-family: 'Share Tech Mono', monospace;
     color:blue;
-}
+} */
 .container {
     width: 90%;
     margin: auto;
@@ -177,6 +180,7 @@ margin: 30px;
     margin: 0;
     text-align: center;
     color:red;
+    margin: 30px;
   }
   .mainSection {
     display: flex;
@@ -186,14 +190,17 @@ margin: 30px;
     border-radius: 4px;
     height: 300px;
     color:blue;
+    overflow: scroll;
   }
+
   .textBox{
     height: 200px;
     min-width: 200px;
     width: 50%;
     overflow-y: auto;
-    color:pink;
+    
   }
+
   .buttonBar {
     min-width: 500px;
     width: 60%;
@@ -204,12 +211,80 @@ margin: 30px;
   }
   
   .button {
-    padding: 0 15px;
-    border: 3px solid #DE2222;
-    background-color: #DECA22;
+    padding: 15px;
+    /* border: 3px solid #DE2222;*/
+    background-color:white; 
     border-radius: 4px;
+
+    border: 1px solid white;
+    
+    
+    text-align: center;
+    
+    font-size: 1em;
+    box-shadow: 0px 0px 10px 10px white;
+    margin-bottom: 40px;
+
+
+
   }
   
   .button:active {
     background-color: #DE2222;
   }
+
+  .home{
+    background-color:white; 
+    font-size: 1em;
+    box-shadow: 0px 0px 10px 10px white;
+    margin-bottom: 40px;
+    font-family: 'Share Tech Mono', monospace;
+    text-align: center;
+  }
+
+
+
+  #player{
+      color: white;
+  }
+
+  .bodyContainer2{
+    display: flex;
+    
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Share Tech Mono', monospace;
+    background-size: 100%;
+    background-color: black;
+    color: white;
+}
+.playerStats2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solidblack;
+    width: 19vw;
+    height: 35vh;
+    text-align: center;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 20px 10px white;
+    border-radius: 2%;
+
+
+}
+.enemyStats2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solidblack;
+    width: 19vw;
+    height: 35vh;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 20px 10px white;
+
+}
