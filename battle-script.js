@@ -62,9 +62,9 @@ const reset = () => {
 
     heroShip.hull = 20;
     document.getElementById("outputName").innerHTML = heroShip.hull;
-
+    document.getElementById("outputHull").innerHTML = "6";
     alienShip.splice(0, alienShip.length);
-
+    
 
     const random = Math.floor(Math.random() * 6) + 5;
     for (let i = 0; i < 6; i++) {
